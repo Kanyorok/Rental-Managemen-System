@@ -59,6 +59,7 @@
 .header-span {
   font-size: 16px;
 }
+
 .header-section {
   display: flex;
   justify-content: space-between;
@@ -66,6 +67,7 @@
   margin-right: 40px;
   margin-left: 65px;
 }
+
 .search-section {
   width: 300px;
   height: 30px;
@@ -85,9 +87,10 @@
   padding-left: 50px;
   font-family: lexend, sans-serif;
   background-color: #fff;
-  color: #081E4A;
+  color: #081e4a;
   ;
 }
+
 .material-symbols-outlined {
   position: absolute;
   top: 50%;
@@ -96,12 +99,15 @@
   font-size: 25px;
   pointer-events: none;
 }
+
 .search-container {
   position: relative;
 }
+
 .filter-container {
   position: relative;
 }
+
 .filter-container .material-symbols-outlined {
   left: 10%;
   font-size: 23px;
