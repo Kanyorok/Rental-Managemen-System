@@ -111,3 +111,31 @@
   left: 10%;
   font-size: 23px;
 }
+
+.side-bar ul {
+  list-style-type: none;
+  gap: 0;
+}
+
+.side-bar li {
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+
+.side-bar li .material-symbols-outlined {
+  position: relative;
+  left: 40px;
+}
+
+.side-bar a:hover .material-symbols-outlined {
+  color: blue;
+}
+
+.side-bar a {
+  text-decoration: none;
+  color: black;
+}
+
+.side-bar a:hover {
+  color: blue;
+}
