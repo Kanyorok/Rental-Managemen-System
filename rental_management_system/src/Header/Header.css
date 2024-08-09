@@ -34,6 +34,7 @@
     background-color: #fff;
     border: 1px solid black;
     box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
   }
   
   .header-user {
@@ -102,3 +103,19 @@
     left: 10%;
     font-size: 23px;
   }
+
+  .side-bar ul {
+    list-style-type: none;
+    gap: 0;
+  }
+  
+  .side-bar li {
+    margin-bottom: 20px;
+    margin-top: 40px;
+  }
+  
+  .side-bar li .material-symbols-outlined {
+    position: relative;
+    left: 40px;
+  }
+  
