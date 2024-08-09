@@ -38,6 +38,7 @@
   "devDependencies": {
     "ajv": "^7.2.4",
     "axios": "^1.7.3",
+    "react-bootstrap": "^2.10.4",
     "react-router-dom": "^6.26.0"
   }
 }
