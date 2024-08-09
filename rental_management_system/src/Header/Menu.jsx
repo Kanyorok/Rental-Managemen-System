@@ -1,5 +1,7 @@
 import './Header.css';
-import image from '../Assets/images/I-TUS.png'
+import image from '../Assets/images/I-TUS.png';
+import { Link }from 'react-router-dom';
+
 
 const Menu = () => {
 
@@ -11,7 +13,9 @@ const Menu = () => {
                 <h2 className="header-h2">H&E Properties</h2>
             </div>
             <div className="header-seconddiv">
-                <button className="header-listing">Start Listing</button>
+                <Link to="/customer-dash">
+                    <button className="header-listing" >Start Listing</button>
+                </Link>
                 <button className="header-user">AA</button>
             </div>
         </header>
