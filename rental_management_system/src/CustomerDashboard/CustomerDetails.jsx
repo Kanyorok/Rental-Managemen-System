@@ -8,12 +8,12 @@ const CustomerDetails = () => {
     const [prevLocation, setPrevLocation] = useState("")
 
     useEffect(()=>{
-        setMovieDetail(location.state.prod);
+        setMovieDetail(location.state.item);
         setPrevLocation(location.pathname);
     },[location]);
 
     console.log(location);
-    console.log(movieDetail.name);
+    console.log(movieDetail);
     
   return (
     <div className="container container-fluid">
@@ -21,7 +21,7 @@ const CustomerDetails = () => {
         <div className="row justify-content-around mt-5 user-info">
             <div className="col-12 col-md-3">
                 <figure className='avatar avatar-profile'>
-                    <img className="rounded-circle img-fluid" src={movieDetail.image.medium} alt='' />
+                    <img className="rounded-circle img-fluid" src={movieDetail.image?.original} alt='Movie image' />
                 </figure>
                 <a href="#" id="edit_profile" className="btn btn-primary btn-block my-5">
                     Edit Profile
