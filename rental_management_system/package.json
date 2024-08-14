@@ -36,6 +36,10 @@
     ]
   },
   "devDependencies": {
-    "ajv": "^7.2.4"
+    "@reduxjs/toolkit": "^2.2.7",
+    "ajv": "^7.2.4",
+    "react-redux": "^9.1.2",
+    "redux": "^5.0.1",
+    "redux-devtools-extension": "^2.13.9"
   }
 }
