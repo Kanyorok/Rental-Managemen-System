@@ -1,48 +1,44 @@
 import {useState, useEffect} from 'react'
 import './Customer.css';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useParams } from 'react-router-dom';
+import { displaySingleProduct } from '../Redux/singleProduct/singleProductSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import Loader from '../Layout/Loader';
 
 const CustomerDetails = () => {
-    const location = useLocation();
-    const[movieDetail, setMovieDetail] = useState({});
-    const [prevLocation, setPrevLocation] = useState("")
+    const { id } = useParams();
+    const dispatch = useDispatch();
 
     useEffect(()=>{
-        setMovieDetail(location.state.item);
-        setPrevLocation(location.pathname);
-    },[location]);
+        dispatch(displaySingleProduct(id));
+    },[dispatch, id]);
 
-    console.log(location);
-    console.log(movieDetail);
+    const { loading, success, product, error } = useSelector((state) => state.singleProduct);
+    
     
   return (
     <div className="container container-fluid">
-        <h2 className="mt-5 ml-5">My Profile</h2>
+        <h2 className="mt-5 ml-5">Product Details</h2>
         <div className="row justify-content-around mt-5 user-info">
+        {loading ?(<Loader/>) :( <>
             <div className="col-12 col-md-3">
                 <figure className='avatar avatar-profile'>
-                    <img className="rounded-circle img-fluid" src={movieDetail.image?.original} alt='Movie image' />
+                    <img className="rounded-circle img-fluid" src={product.image} alt='Movie image' />
                 </figure>
                 <a href="#" id="edit_profile" className="btn btn-primary btn-block my-5">
-                    Edit Profile
+                    Product Info
                 </a>
             </div>
      
             <div className="col-12 col-md-5">
-                 <h4>Full Name</h4>
-                 <p>{movieDetail.name}</p>
+                 <h4>Name</h4>
+                 <p>{product.title}</p>
      
-                 <h4>Email Address</h4>
-                 <p>ghulamabbas258@gmail.com</p>
+                 <h4>Description</h4>
+                 <p>{product.description}</p>
 
-                 <a href="#" className="btn btn-danger btn-block mt-5">
-                    My Orders
-                </a>
-
-                <a href="#" className="btn btn-primary btn-block mt-3">
-                    Change Password
-                </a>
-            </div>
+                 
+            </div></>) }
         </div>
     </div>
   )
