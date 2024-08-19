@@ -1,30 +1,33 @@
-import {useState, useEffect} from "react";
+import {useEffect} from "react";
 import image from "../Assets/images/I-TUS.png";
 import Aside from "../Header/Aside";
 import './Customer.css';
 import { showSeries } from "../Api/v1/Api";
 import DisplayMovies from "./DisplayMovies";
+import { displayMovies } from "../Redux/allMovies/allMoviesSlice";
+import { useDispatch, useSelector } from "react-redux";
+import Loader from "../Layout/Loader";
 
 
 const CustomerDash = () => {
-    const [series, setSeries] = useState([]);
+    const dispatch = useDispatch()
 
     useEffect(() => {
-        const fetchData = async () => {
-            await showSeries(setSeries);
-            
-        };
-
-        fetchData();
-    }, []);
-
+       dispatch(displayMovies());
+    }, [dispatch]);
+    
+    const { loading, success, movies, error } = useSelector((state) => state.movies);
+   
   return (
     <div className="main-content">
       <Aside/>
       <div className="display-movies">
-      {series.map((item)=>(
+        {loading ?(<Loader/>) : (movies.map((item)=>(
         <DisplayMovies item={item} key={item.id}/>
-      ))}
+      )))
+        
+        }
+      
       </div>
       
     </div>
