@@ -15,18 +15,18 @@ const DisplayMovies = ({item}) => {
     <section className="main-card" key={item.id}>
         <div className="main-dynamic-object">
           <div className="main-dynamic-top-section">
-            <img src={item.image.medium} alt="rental image" />
+            <img src={item.image} alt="rental image" />
           </div>
           <div className="main-dynamic-bottom-section">
-            <h2>{item.name}</h2>
-            <p>It is a good movie</p>
+            <h2>{item.title}</h2>
+            <p>{item.description}</p>
             <div className="main-dynamic-info">
               <div>
                 <p>300+ Units</p>
-                <p>Ksh. 10000</p>
+                <p>Ksh. {item.price}</p>
               </div>
               <div>
-                <p>6 beds $5 bath</p>
+                <p>{item.category}</p>
                 <p>Applicants: 4</p>
               </div>
             </div>
