@@ -5,7 +5,7 @@
 
 The project is about building a mobile web application where a user can manage budget: they have a list of transactions associated with a category, so that they can see how much money they spent and on what. 
 
-The idea is to create an application that allows the user to:
+The idea is to create an application that allows a user to:
 - register and log in, so that the data is private to them.
 - introduce new transactions associated with a category.
 - see the money spent on each category.
@@ -17,16 +17,10 @@ The idea is to create an application that allows the user to:
 ### Project requirements
 
 #### Design
-- You should follow these [design guidelines](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=), including:
+- The app will be created using this [design guidelines](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=), including:
   - Colors.
   - Typography: font face, size and weight.
   - Layout: composition and space between elements.
-
-> NOTE: In these design guidelines there are several UIs that you won't need for this exercise; also, some pages are not given a design and you will create them following the design guidelines of the other pages.
-
-Original design idea by [Gregoire Vella on Behance](https://www.behance.net/gregoirevella).
-
-The [Creative Commons license of the design](https://creativecommons.org/licenses/by-nc/4.0/) requires that you give appropriate credit to the author. Therefore, you must do it in the README of your project.
 
 #### Interactions
 - Splash screen
