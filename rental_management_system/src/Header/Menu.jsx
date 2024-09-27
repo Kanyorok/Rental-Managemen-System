@@ -14,9 +14,11 @@ const Menu = () => {
             </div>
             <div className="header-seconddiv">
                 <Link to="/customer-dash">
-                    <button className="header-listing" >Start Listing</button>
+                    <button className="header-listing" >Show Listing</button>
                 </Link>
-                <button className="header-user">AA</button>
+                <Link to="/register">
+                    <button className="header-user">Register User</button>
+                </Link>
             </div>
         </header>
     );
